@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+.venv*/
+.idea/
+mlruns/
+data/raw/*.csv
+models/*.joblib
+models/*.json
+monitoring/*.csv
+reports/*.json
+reports/*.txt
+.env
