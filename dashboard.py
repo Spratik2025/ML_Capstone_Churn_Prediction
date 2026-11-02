@@ -24,7 +24,7 @@ st.set_page_config(
 
 API_URL = os.getenv(
     "API_URL",
-    "https://ml-capstone-churn-prediction.onrender.com"
+    "https://ml-capstone-churn-prediction-4.onrender.com"
 ).rstrip("/")
 
 SUMMARY_URL = f"{API_URL}/monitoring/summary"
