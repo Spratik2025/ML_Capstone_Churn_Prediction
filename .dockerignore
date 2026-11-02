@@ -1,3 +1,4 @@
+
 .git
 .venv
 .venv312
@@ -5,4 +6,7 @@
 __pycache__
 mlruns
 data/raw
-monitoring/*.csv
+
+# Exclude prediction logs, but include reference data
+monitoring/predictions.csv
+!monitoring/reference_data.csv
