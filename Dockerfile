@@ -5,26 +5,26 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Install Python dependencies
+# Install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application files
+# Copy application
 COPY app ./app
 
-# Copy trained ML model and metadata
+# Copy trained model and metadata
 COPY models ./models
 
-# Copy training evaluation metrics
+# Copy evaluation metrics
 COPY reports ./reports
 
 # Create monitoring directory
 RUN mkdir -p monitoring
 
-# Copy reference data for drift monitoring
+# Copy reference data
 COPY monitoring/reference_data.csv ./monitoring/reference_data.csv
 
-# Verify that the trained model exists
+# Verify model file exists
 RUN test -f /app/models/model.joblib
 
 EXPOSE 8000
